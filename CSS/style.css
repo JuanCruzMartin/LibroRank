@@ -235,8 +235,8 @@ header div .titulo {
     padding: 20px;
 }
 .tarjeta1 .nombre{
-    
-    background-color: rgba(255, 193, 7, 0.9); /* Color de fondo amarillo */
+    background: linear-gradient(45deg, #FFC107, #FF9800);
+   
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -250,7 +250,23 @@ p,h3,h2,li {
     
 }
 
-
+.tarjeta1 .librosPreferidos ol li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.librosleidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.librosleidos p {
+    font-size: 48px; /* Tamaño del número */
+    font-weight: bold; /* Negrita para destacar */
+    margin: 0; /* Elimina márgenes */
+}
 
 /* PRUEBAS SOBRE TARJETAS */
 .tarjeta1 h2, 
@@ -268,14 +284,12 @@ p,h3,h2,li {
     border-radius: 5px;
     transition: background-color 0.3s ease; /* Hace que el efecto sea suave */
 }
-.tarjeta1 .librosPreferidos ol li {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+
+.tarjeta1 .nombre:hover {
+    background-color: rgba(255, 193, 7, 0.9); /* Cambia el color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transition: all 0.3s ease; /* Suaviza la transición */
 }
-
-
 
 
 
