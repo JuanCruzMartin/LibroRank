@@ -7,6 +7,25 @@
     box-sizing: border-box;
     font-family:"Poppins",sans-serif ;
 }
+h1 {
+    font-size: 42px; /* Tamaño claro para títulos principales */
+    font-weight: 700; /* Negrita para destacar el título */
+    margin-bottom: 20px;
+    text-align: center; /* Alineación uniforme */
+    color: #e7e1e1;
+}
+h2 {
+    font-size: 32px; /* Tamaño claro para títulos principales */
+    font-weight: 700; /* Negrita para destacar el título */
+    margin-bottom: 20px;
+    text-align: center; /* Alineación uniforme */
+}
+
+h3 {
+    font-size: 24px; /* Tamaño claro para subtítulos */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
 body{
     display: flex;
     justify-content: center;
@@ -81,20 +100,25 @@ body{
 .remember-forgot a:hover{
     text-decoration: underline;
 }
-
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow:  0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
+/* Estilo global para todos los botones */
+.button {
+    background-color: #FFC107;
     color: #333;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: background-color 0.3s ease;
 }
+
+.button:hover {
+    background-color: #FF9800;
+}
+
+/* Estilo aplicado al formulario */
+
 
 .wrapper .btn a{
     width: 100%;
@@ -160,7 +184,7 @@ header div .titulo {
     position: fixed; /* Fija el header en la parte superior */
     top: 0;
     left: 0;
-    background-color:transparent;
+    background-color: transparent; /* Mantén el fondo del navbar transparente */
     z-index: 1000; /* Asegura que el header esté por encima del contenido */
     padding: 10px 0; /* Añade un poco de espacio arriba y abajo */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el header */
@@ -176,6 +200,7 @@ header div .titulo {
 }
 
 .nav-bar li {
+    
     margin: 0 15px; /* Agrega un margen horizontal entre los elementos */
 }
 
@@ -188,13 +213,16 @@ header div .titulo {
     border-radius: 40px;
     margin: 10px;
     padding: 10px;
-
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente para los botones */
 }
 
 /* Cambia el color del enlace al pasar el ratón */
+
+/* Cambia el color del enlace al pasar el ratón */
+/* Cambia el color del enlace al pasar el ratón */
 .nav-bar a:hover {
     color: #fffb00;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para los botones */
 }
 
 /* MAIN DE LA PAGINA PRINCIPAL */
@@ -206,6 +234,7 @@ header div .titulo {
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     width: 90vw;
     box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+    margin-top: 100px;
 }
 
 /* Estilos para las tarjetas */
@@ -221,9 +250,66 @@ header div .titulo {
     justify-content: center;
     border: 4px solid wheat;
     backdrop-filter: blur(5px);
+    min-height: 90%; /* Para que crezcan según el contenido */
    
 }
 
+.tarjeta1:hover, .tarjeta2:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* TARJETA NUMERO 2 */
+
+.tarjeta2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.tarjeta2 h2 {
+    font-size: 40px;
+}
+/* Botón de Cargar Libro Mejorado */
+.tarjeta2 .cargaDeLibro {
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Degradado moderno */
+    color: #fff; /* Color de texto blanco para contraste */
+    padding: 15px 30px; /* Espaciado interno más grande para hacerlo más prominente */
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 20px; /* Aumenta el tamaño de la fuente para mayor legibilidad */
+    font-weight: 700; /* Negrita */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidad */
+    transition: all 0.3s ease-in-out; /* Efecto de transición suave al hacer hover */
+    width: fit-content; /* El botón se ajusta al contenido */
+    align-self: center; /* Centra el botón */
+}
+
+/* Efecto hover (cuando el usuario pasa el ratón) */
+.tarjeta2 .cargaDeLibro:hover {
+    background: linear-gradient(135deg, #FF9800, #FF5722); /* Cambio de degradado al hacer hover */
+    transform: translateY(-5px); /* Hace que el botón "salte" ligeramente */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto flotante */
+}
+.tarjeta2 .nombreLibro ,.nombreAutor {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-around;
+}
+#nombreLibroInput , #nombreAutor{
+    font-size: 30px;
+}
+
+.tarjeta2 label {
+    font-size: 30px;
+    color: #e7e1e1;
+}
 /* PERSONALIZAR TARJETA , TARJETA 1  DATOS DEL USUARIO */
 .tarjeta1 {
     display:flex;
@@ -234,17 +320,28 @@ header div .titulo {
     justify-content: space-around;
     padding: 20px;
 }
-.tarjeta1 .nombre{
-    background: linear-gradient(45deg, #FFC107, #FF9800);
-   
-    padding: 15px;
-    border-radius: 10px;
+/* Nivel en la Tarjeta 1 Mejorado */
+.tarjeta1 .nombre {
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Degradado moderno */
+    color: #fff; /* Color de texto blanco para contraste */
+    padding: 15px 30px; /* Espaciado interno más grande */
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 25px; /* Tamaño de la fuente ligeramente mayor */
+    font-weight: 700; /* Negrita */
     text-align: center;
-    margin-bottom: 20px;
-    width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    width: fit-content; /* Se ajusta al contenido */
+    align-self: center; /* Centra el nivel */
 }
+
+/* Efecto hover para el nivel */
+.tarjeta1 .nombre:hover {
+    background: linear-gradient(135deg, #FF9800, #FF5722); /* Cambio de degradado */
+    transform: translateY(-5px); /* Efecto de salto */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para el hover */
+}
+
 p,h3,h2,li {
     color: #e7e1e1;
     
@@ -267,15 +364,47 @@ p,h3,h2,li {
     font-weight: bold; /* Negrita para destacar */
     margin: 0; /* Elimina márgenes */
 }
+/* Botón Cargar Libro Mejorado */
+.cargaTitulo {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Degradado verde */
+    color: white; /* Texto blanco */
+    padding: 15px 30px; /* Tamaño del padding */
+    font-size: 18px; /* Tamaño de la fuente */
+    border-radius: 30px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Alineación centrada */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Efecto Hover */
+.cargaTitulo:hover {
+    background: linear-gradient(45deg, #388E3C, #4CAF50); /* Cambio de degradado al pasar el mouse */
+    transform: translateY(-3px); /* Desplaza el botón ligeramente hacia arriba */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse */
+}
+
+/* Efecto de clic */
+.cargaTitulo:active {
+    transform: translateY(1px); /* Da la sensación de que se presiona */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduce la sombra cuando se hace clic */
+}
+
 
 /* PRUEBAS SOBRE TARJETAS */
 .tarjeta1 h2, 
 .tarjeta1 h3, 
 .tarjeta1 p, 
 .tarjeta1 li {
-    margin-bottom: 15px; /* Aumenta el espacio entre los elementos */
-    line-height: 1.5; /* Mejora la legibilidad con un mayor espaciado entre líneas */
+    margin-bottom: 25px; /* Aumenta el espacio entre los elementos */
+    line-height: 1.8; /* Mejora la legibilidad con un mayor espaciado entre líneas */
     color: #fff;
+
 }
 .tarjeta1 h2:hover, 
 .tarjeta1 h3:hover, 
@@ -291,6 +420,105 @@ p,h3,h2,li {
     transition: all 0.3s ease; /* Suaviza la transición */
 }
 
+input:invalid {
+    border-color: red;
+}
+
+
+
+/* Botón de login estilizado */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #4CAF50, #81C784); /* Degradado */
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+/* Efecto hover para el botón */
+.btn-login:hover {
+    background: linear-gradient(45deg, #388E3C, #66BB6A); /* Cambia el degradado */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+}
+
+/* Si deseas un botón con borde más fino */
+.btn-login:active {
+    transform: scale(0.98); /* Hace que el botón se comprima al hacer clic */
+}
+th {
+    color: #e7e1e1;
+    margin: 15px;
+    padding: 25px;
+    border: 2px solid wheat;
+    background-color: #FF9800;
+    
+}
+
+
+
+/* 
+PAGINA DE BIBLIOTECA!!! */
+
+
+
+.biblioteca-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.libro {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.libro:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.libro img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.libro-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.boton-accion {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0073e6;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-accion:hover {
+    background-color: #005bb5;
+}
+
+
 
 
 
@@ -301,5 +529,13 @@ p,h3,h2,li {
     }
     .tarjeta1, .tarjeta2 {
         width: 100%; /* Asegura que las tarjetas ocupen todo el ancho en móviles */
+        padding: 15px;
+    }
+    .tarjeta2 h2, .tarjeta1 h2 {
+        font-size: 24px; /* Reducción de fuentes en pantallas pequeñas */
     }
 }
+
+
+
+

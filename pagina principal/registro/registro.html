@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style-registro.css">
+</head>
+<body>
+    <header class="headermain">
+        <nav class="navprincipal">
+            <ul class="nav-bar">
+                <li class=""><a href="../main.html">Mi Biblioteca</a></li>
+                <li class=""><a href="../ranking.html">Ranking</a></li>
+                <li class=""><a href="../../index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="registroForm">
+
+        <h2>Formulario de registro       </h2>
+        <form id="formulario" novalidate>
+            <label for="nombre">Nombre :</label>
+            <input type="text" name="nombre" id="nombre" minlength="3" required autocomplete="off">
+            <div class="error" id="errorNombre"></div><br>
+    
+            <label for="apellido">Apellido :</label>
+            <input type="text" name="apellido" id="apellido" minlength="3" required autocomplete="off">
+            <div class="error" id="errorApellido"></div><br>
+    
+    
+    
+            
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required autocomplete="off">
+            <div class="error" id="errorEmail"></div><br>
+    
+    
+            
+            
+            <label for="edad">Edad :</label>
+            <input type="number" name="edad" id="edad" required>
+            <div class="error" id="errorEdad"></div><br>
+    
+    
+            
+            <label for="tipoDeLector">Tipo de lector :</label>
+            <select name="tipoDeLector" id="tipoDeLector">
+                
+                    <option value="">Seleccione...</option>
+                    <option value="informativa">Lectura Informativa</option>
+                    <option value="recreativa">Lectura Recreativa</option>
+                    <option value="reflexiba">Lectura Reflexiba</option>
+                    <option value="recreativa">Lectura Reflexiba</option>
+    
+            </select>
+            <div class="error" id="errorTipoDeLector"></div><br>
+       
+            <label for="estiloDeLibroQueLee">Tipo de libros que mas lee:</label>
+            <select name="estiloDeLibroQueLee" id="estiloDeLibroQueLee">
+                <option value="">Seleccione...</option>
+                <option value="cientificos">Cientificos</option>
+                <option value="deViaje">De viajes</option>
+                <option value="biografias">Biografias</option>
+                <option value="poesia">Poesia</option>
+                <option value="novelas">Novelas</option>
+                <option value="educacion">Educacion</option>
+                <option value="policiales">Policiales</option>
+                <option value="terror">Terror</option>
+                <option value="ficcion">Ficcion</option>
+                <option value="autoAyuda">AutoAyuda</option>
+                <option value="politica">Politica</option>
+            </select>
+            <div class="error" id="errorActividad"></div>
+            <br>
+    
+            <label for="nivelEstudi">Nivel Estudio :</label>
+    
+            <select name="nivelEstudio" id="nivelEstudio">
+                <option value="">Selecione...</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="terciario">terciario</option>
+                <option value="Universitario">Universitario</option>
+                <option value="Universitario incompleto">Universitario incompleto</option>
+                <option value="Posgrado">Posgrado</option>      
+            </select>
+            <div class="error" id="errorNivelEstudio"></div>
+    
+    
+            <label class="inline">
+                <input type="checkbox" name="aceptoTerminos" id="aceptoTerminos" required>
+                Acepto terminos y condiciones
+            </label>
+            <div class="error" id="errorAceptoTerminos"></div>
+    
+            <label class="inline">Publicidad</label>
+            <input type="checkbox" name="publicidad" id="publicidad" value="ofertas">
+            <label  class="inline" for="publicidad">Ofertas</label>
+            <input type="checkbox" name="publicidad" id="novedades" value="novedades">
+            <label  class="inline" for="publicidad">Novedades</label>
+            <div class="error" id="errorPublicidad"></div>
+            <br>
+    
+            <input type="submit" value="Registrate">
+    
+    
+        </form>
+    
+    </div>
+    
+   <script src="../../JavaScrip/script.js"></script> 
+</body>
+</html>
+

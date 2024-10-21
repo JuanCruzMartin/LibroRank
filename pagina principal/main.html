@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LibroRank</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    
 </head>
 <body>
     <header class="headermain">
         <nav class="navprincipal">
             <ul class="nav-bar">
-                <li class=""><a href="#">Mi Biblioteca</a></li>
-                <li class=""><a href="#">Ranking</a></li>
-                <li class=""><a href="#">Log Out</a></li>
+                <li class=""><a href="biblioteca.html">Mi Biblioteca</a></li>
+                <li class=""><a href="ranking.html">Ranking</a></li>
+                <li class=""><a href="../index.html">Log Out</a></li>
             </ul>
         </nav>
     </header>
@@ -39,8 +40,25 @@
             </div>
         </div>
         <div class="tarjeta2">
-
+            <div class="cargaDeLibro">
+                <h2 class="cargarLibro">Cargar Libro</h2>
+        </div>
+            <div class="nombreLibro">
+                <label for="">Nombre Del Libro</label>
+                <input type="text" name="nombreLibro" id="nombreLibroInput" placeholder="Nombre del libro" required>                
+            </div>
+            <div class="nombreAutor">
+                <label for="">Nombre del Autor</label>
+                <input type="text" name="nombreAutor" id="nombreAutor" placeholder="Nombre del Autor" required>
+            </div>
+            <div class="puntaje">
+                <label for="">Puntaje</label>
+                <input type="number" min="0" max="10" name="puntaje" id="puntaje" placeholder="puntaje" required>
+            </div>
+            <button type="submit" class="cargaTitulo" onclick="doValidation()">CARGAR TITULO</button>
+            <p id="error"></p>
         </div>
     </main>
+    <script src="../JavaScrip/script.js"></script>
 </body>
 </html>

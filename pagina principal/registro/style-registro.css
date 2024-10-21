@@ -1,0 +1,115 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif ;
+}
+h2 {
+    font-size: 32px; /* Tamaño claro para títulos principales */
+    font-weight: 700; /* Negrita para destacar el título */
+    margin-bottom: 20px;
+    text-align: center; /* Alineación uniforme */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background:url(../../assets/img/background-618226_1280.png);
+}
+#registroForm{
+    background-color: rgb(219, 220, 207);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+label.inline {
+    display: inline-block;
+}
+
+input , select {
+    padding: 6px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+}
+
+input[type="submit"]{
+    background-color: rgb(76, 133, 79);
+    color: aliceblue;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover{
+    background-color:rgb(51, 94, 53) ;
+    transition:.5s ease ;
+};
+
+.error{
+    color: red ;
+    font-size: 14px;
+    display: none;
+}
+/* NAV */
+.headermain {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Mantén el fondo del navbar transparente */
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+    padding: 10px 0; /* Añade un poco de espacio arriba y abajo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+}
+.nav-bar {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0;
+    display: flex; /* Coloca los elementos en línea horizontal */
+    justify-content: center; /* Alinea los elementos en el centro */
+}
+.nav-bar li {
+    
+    margin: 0 15px; /* Agrega un margen horizontal entre los elementos */
+}
+.nav-bar a {
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+    color: #fff0f0; /* Color del texto de los enlaces */
+    font-weight: bold; /* Negrita para el texto */
+    font-size: 25px; /* Tamaño de la fuente */
+    border: 2px solid rgb(235, 235, 8);
+    border-radius: 40px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente para los botones */
+}
+.nav-bar a:hover {
+    color: #fffb00;
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para los botones */
+}
+/* ACA TERMINA EL NAV */
