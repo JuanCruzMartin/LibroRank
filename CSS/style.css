@@ -100,6 +100,34 @@ body{
 .remember-forgot a:hover{
     text-decoration: underline;
 }
+                /* COSAS DEL LOGIN CON JS */
+
+
+
+                
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#show-hide{
+    position: relative;
+    top: -10px;
+    float: right;
+    color: #929292;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transform: all .5s ease;
+}
+#show-hide:hover{
+    border-bottom: 1px solid rgb(141, 141, 141);
+    color: #dddada;
+}
+
+
 /* Estilo global para todos los botones */
 .button {
     background-color: #FFC107;
